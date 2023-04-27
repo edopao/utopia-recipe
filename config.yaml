@@ -1,0 +1,8 @@
+name: utopia-dev
+store: /user-environment
+system: hohgant
+spack:
+  repo: https://github.com/finkandreas/spack
+  commit: v0.19.2
+mirror:
+  enable: false

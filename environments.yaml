@@ -1,0 +1,33 @@
+gcc-env:
+  compiler:
+      - toolchain: gcc
+        spec: gcc@11
+  unify: true
+  specs:
+  - cuda@11.8
+  - trilinos@13.4.0 cxxstd=17 +amesos2 +belos ~epetra +intrepid2 +mumps +openmp +suite-sparse +superlu-dist +shards +nox
+  - petsc +hypre ~complex +mumps +openmp +suite-sparse +superlu-dist
+  - slepc ~arpack
+  - hypre
+  - cmake
+  - py-numpy
+  - swig
+  - git
+  - yaml-cpp
+  - openblas
+  - suite-sparse@5.13.0
+  mpi:
+    spec: cray-mpich
+    gpu: cuda
+  variants:
+    - +mpi
+    - +cuda
+    - cuda_arch=80
+tools:
+  compiler:
+      - toolchain: gcc
+        spec: gcc@11
+  unify: true
+  specs:
+  - cmake
+  - python@3.10
