@@ -1,4 +1,4 @@
-gcc-env:
+gcc-nvgpu:
   compiler:
       - toolchain: gcc
         spec: gcc@11
@@ -9,10 +9,6 @@ gcc-env:
   - petsc +hypre ~complex +mumps +openmp +suite-sparse +superlu-dist
   - slepc ~arpack
   - hypre
-  - cmake
-  - py-numpy
-  - swig
-  - git
   - yaml-cpp
   - openblas
   - suite-sparse@5.13.0
@@ -21,8 +17,6 @@ gcc-env:
     gpu: cuda
   variants:
     - +mpi
-    - +cuda
-    - cuda_arch=80
 tools:
   compiler:
       - toolchain: gcc
@@ -30,4 +24,7 @@ tools:
   unify: true
   specs:
   - cmake
+  - git
   - python@3.10
+  - py-numpy
+  - swig
