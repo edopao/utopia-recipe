@@ -17,6 +17,8 @@ gcc-nvgpu:
     gpu: cuda
   variants:
     - +mpi
+    - +cuda
+    - cuda_arch=80
 tools:
   compiler:
       - toolchain: gcc
