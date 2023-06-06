@@ -5,4 +5,3 @@ spack:
   commit: v0.19.2
   repo: https://github.com/finkandreas/spack
 store: /user-environment
-system: hohgant
